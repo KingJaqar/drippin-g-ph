@@ -58,7 +58,7 @@ Read and build in this order. The governing rule: **`secure-main/` must be fully
 | 2 | [`00-architecture.md`](00-architecture.md) — stack, diagram, folder structure, shared tooling, `.env.local` contract | 0 | Written |
 | 3 | [`01-database.md`](01-database.md) — schema, ER diagram, migrations, RLS posture | 1 | Written |
 | 4 | [`02-seed-data.md`](02-seed-data.md) — 13 products, placeholder images, test accounts | 1 | Written |
-| 5 | `03-frontend.md` — design system and every UI component | 2 | Not started |
+| 5 | [`03-frontend.md`](03-frontend.md) — design system and every UI component (25 components, all config files) | 2 | Written |
 | 6 | `04-api-and-actions.md` — route handlers and server actions, COD checkout, Buy Now | 3 | Not started |
 | 7 | `05-local-setup.md` — clone → run → acceptance checklist | 4 | Not started |
 | 8 | `SECURITY-LAB.md` — scope, rules of engagement, tools, reporting template | 6 | Not started |

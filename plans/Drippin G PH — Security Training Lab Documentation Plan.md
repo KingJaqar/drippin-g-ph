@@ -164,9 +164,9 @@ introduce flaws into `vulnerable-lab/` only afterward.** All seven phases are co
   stock), original placeholder-image strategy, and test accounts.
 - [x] RLS posture documented: `secure-main/` policies on; `vulnerable-lab/` gaps marked intentional.
 
-### Phase 2 — `secure-main/` frontend (full, working, no flaws)
-- Write `03-frontend.md`: Nike-structure/original-assets design system + the component checklist.
-- Build order of the UI: layout + sticky nav + slide-out menu → landing/home (hero, featured, promos) →
+### Phase 2 — `secure-main/` frontend (full, working, no flaws) ✅ Done (2026-10-11)
+- [x] Write `03-frontend.md`: Nike-structure/original-assets design system + the component checklist.
+- [x] Build order of the UI: layout + sticky nav + slide-out menu → landing/home (hero, featured, promos) →
   product grid/cards + filters/search → PDP (gallery + buy panel with pill sizes, Add to Bag, Buy Now) →
   cart drawer → COD checkout → auth (login/signup) + guest-mode entry → account/order history →
   admin dashboard shell.
@@ -210,7 +210,7 @@ introduce flaws into `vulnerable-lab/` only afterward.** All seven phases are co
 | --- | --- | --- |
 | 0 — Setup & foundations | ✅ Done 2026-10-11 | `docs/README.md`, `docs/00-architecture.md`, placeholder READMEs in `secure-main/` and `vulnerable-lab/`, root `.gitignore`. Re-verified 2026-10-11: npm pins re-checked against the registry, 0 broken anchors, no secrets; fixed `public/images/` missing from the §4 tree, added the config-only differences table (`package.json`, `.env.example`, `config.toml`), and added TRAINING-ONLY labels. |
 | 1 — Data layer | ✅ Done 2026-10-11 | `docs/01-database.md` (10 tables, ER diagram, migrations `0001`–`0008`, secure `0007` RLS, per-app `config.toml`) + `docs/02-seed-data.md` (13 products / 42 variants / 6 reviews, SVG placeholder generator, 3 test accounts). Scripted checks: 13 products (5/4/4), 42 unique SKUs, slug↔image↔generator alignment, 0 broken doc links, no secrets. Decisions used: `public.users`↔`auth.users` trigger, guest carts/orders via SECURITY DEFINER token-scoped fns (no anon blanket access), failed logins counted from `audit_logs`, added `orders.guest_token` for guest lookup. |
-| 2 — `secure-main/` frontend | Not started | Tailwind 4 is CSS-configured: the plan's `tailwind.config` becomes the `@theme` block in `app/globals.css` + `postcss.config.mjs`. |
+| 2 — `secure-main/` frontend | ✅ Done 2026-10-11 | `docs/03-frontend.md`: 25 components, 49 labeled code listings, `package.json` + configs, complete design system in `globals.css` `@theme`, all 13 pages. 0 broken anchors, no secrets. Tailwind 4 CSS-configured as planned. |
 | 3 — `secure-main/` backend | Not started | Next.js 16: session refresh lives in `proxy.ts` (formerly `middleware.ts`). |
 | 4 — Verify `secure-main/` | Not started | Add a check that every listener is on `127.0.0.1`. |
 | 5 — `vulnerable-lab/` | Not started | SQLi via lab-only migration `9001_lab_only_unsafe_functions.sql` + `supabase.rpc()`. |
